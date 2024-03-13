@@ -1,0 +1,48 @@
+//overloaded constructor
+#include <iostream>
+using namespace std;
+
+class Hamburger{
+    public:
+    string Bread;
+    string Ham;
+    string veg;
+    string source;
+    
+    Hamburger(string Bread, string Ham, string veg, string source){
+        this->Bread = Bread;
+        this->Ham = Ham;
+        this->veg = veg;
+        this->source = source;
+    }
+    Hamburger(string Bread, string Ham, string veg){
+        this->Bread = Bread;
+        this->Ham = Ham;
+        this->veg = veg;
+    }
+    Hamburger(string Bread, string Ham){
+        this->Bread = Bread;
+        this->Ham = Ham;
+    }
+    Hamburger(string Bread){
+        this->Bread = Bread;
+    }
+    
+    void order(){
+        cout<<"Your order will be ";
+        if(!Bread.empty()) cout<<Bread<<"-";
+        if(!Ham.empty()) cout<<Ham<<"-";
+        if(!veg.empty()) cout<<veg<<"-";
+        if(!source.empty()) cout<<source<<" ";
+        cout<<"Hamburger";
+    }
+};
+
+int main()
+{
+    Hamburger firstBurge("Normal Bread", "Chicken", "Tomato", "Mastash");
+    
+    firstBurge.order();
+
+    return 0;
+}
