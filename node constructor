@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+class node{
+  public:
+    int value;
+    node *next;
+};
+
+int main()
+{
+    int x=5;
+    node a,b, *head;
+    a.value = x;
+    a.next = &b;
+    head = &a;
+    b.value = head->value+3;
+    node *temp=head;
+    cout<<temp->value<<endl;
+    cout<<temp->next->value<<endl;
+
+    return 0;
+}
