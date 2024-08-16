@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+    for(int i = 0; i < 12; i++){
+        cout<<endl;
+        for(int j = 0; j<16; j++){
+            if(j == 0 || j == 15 || i == 0 || i == 11) cout<<1<<" ";
+            else cout<<0<<" ";
+        }
+    }
+
+    return 0;
+}
